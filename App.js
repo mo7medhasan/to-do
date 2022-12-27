@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
+import { FlatList, ScrollView, StyleSheet, Text, View ,SafeAreaView} from "react-native";
 import Buttons from "./components/Buttons";
 import Header from "./components/Header";
 import Input from "./components/Input";
@@ -16,7 +16,7 @@ useEffect(() => {
 }, [filter,data])
 
   return (
-    <ScrollView   style={styles.container}>
+    <SafeAreaView   style={styles.container}>
       <View>
    <Header/>
       </View>
@@ -30,7 +30,7 @@ useEffect(() => {
         contentContainerStyle={{   justifyContent: "flex-start" ,flex:1 }}
       />
       </View>
-    </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#eee",
     paddingTop: 50,
   },  containerList: {
-    flex: 1,
+    // flex: 1,
   alignItems:"center",
     paddingTop: 10,
     justifyContent:"flex-start"

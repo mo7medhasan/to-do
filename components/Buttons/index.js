@@ -20,7 +20,7 @@ export default function Buttons({filter,setFilter}) {
   }
 
   return (
-  <ScrollView  style={{width: '100%',...styles.container}}  contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}> 
+  <View  style={styles.container}  contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}> 
       <FlatList
         data={dataView}
         renderItem={({ item, index }) => <Button title={item} setFilter={setFilter} filter={filter} />}
@@ -28,23 +28,23 @@ export default function Buttons({filter,setFilter}) {
         horizontal
         contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
       />
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 10,
+    // flex: 1,
+    // paddingTop: 10,
 
   },
   ButtonActive: {
-    padding: 30,
+    padding: 25,
     paddingVertical: 15,
     borderRadius: 999,
     backgroundColor: "red",
   },Button: {
-    padding: 30,
+    padding: 25,
     paddingVertical: 15,
     borderRadius: 999,
     backgroundColor: "#999",
